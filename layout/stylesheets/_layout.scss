@@ -1,0 +1,36 @@
+#sidebar {
+	width: 220px;
+	padding-left: 30px;
+	float: right;
+	min-height: 500px;
+}
+
+/* Must match the sidebar */
+header, footer, .content { margin-right: 280px; }
+
+.content { padding: 10px 20px 20px 20px; }
+
+/* Purely decorative...*/
+#bars {
+	float: right;
+	width: 95px;
+	height: 30px;
+	overflow: hidden;
+	margin-top: 0px;
+
+	div {
+		display: block;
+		float: right;
+		width: 20px;
+		height: 20px;
+		@include border_radius(6px);
+		margin-right: 3px;
+	}
+
+	div {
+		&:nth-child(1) { background-color: $color_one;	 }
+		&:nth-child(2) { background-color: $color_two;   }
+		&:nth-child(3) { background-color: $color_three; }
+		&:nth-child(4) { background-color: $color_four;  }
+	}
+}

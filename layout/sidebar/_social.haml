@@ -1,0 +1,18 @@
+%section
+  %h4 Find Me
+  %ul
+    - if BlogConfig.twitter_url
+      %li
+        %a{:href => BlogConfig.twitter_url} Twitter
+
+    - if BlogConfig.facebook_url
+      %li
+        %a{:href => BlogConfig.facebook_url} Facebook
+
+    - if BlogConfig.linked_in_url
+      %li
+        %a{:href => BlogConfig.linked_in_url} LinkedIn
+
+    - if BlogConfig.tumblr_url
+      %li
+        %a{:href => BlogConfig.tumblr_url} Tumblr

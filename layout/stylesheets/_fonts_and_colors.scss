@@ -1,0 +1,16 @@
+/* Two Fonts */
+$head_font_stack: "p22-underground-1","p22-underground-2",sans-serif;
+$body_font_stack: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia, serif;
+
+/* Four Colors - only first two are used */
+$color_one: 	#da3121;		/* Dark - Headline  */
+$color_two: 	#F9F0E0;		/* Border - Light */
+$color_three: #3253be;		/* Dark  */
+$color_four: 	#f36931;		/* Light */
+
+/* Adjust Colors for Use on the Page */
+$border_color: 		$color_two;
+$headline_color: 	$color_one;
+$text_color: 			#444;
+$link_color: 			#44a;
+$link_color: 			#3253be;

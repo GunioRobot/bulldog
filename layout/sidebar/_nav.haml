@@ -1,0 +1,7 @@
+%section
+  %h4 Links
+  %nav
+    %ul
+      - @pages.reject{|p| p.hide_in_nav}.each do |page|
+        %li
+          %a{:href => page.path}= page.title

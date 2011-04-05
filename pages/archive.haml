@@ -1,0 +1,7 @@
+- last_group = nil
+- @posts.each do |page|
+  - if [page.published_at.year, page.published_at.month] != last_group then
+    - last_group = [page.published_at.year, page.published_at.month]
+    %h2= page.published_at.strftime('%B %Y')
+  %p
+    %a{:href => page.path}= page.title

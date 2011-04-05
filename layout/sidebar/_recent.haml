@@ -1,0 +1,6 @@
+%section
+  %h4 Recent
+  %ul
+    - @posts[0..5].each do |page|
+      %li
+        %a{:href => page.path}= page.title

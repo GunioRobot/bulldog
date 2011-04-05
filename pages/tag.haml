@@ -1,0 +1,8 @@
+- @posts.tagged_with(params[:tag]).each do |page|
+  %h2
+    %a{:href => page.path}= page.title
+  %p= page.summary
+  %p.tag-list
+    %span Tagged:
+    - page.tags.sort.each do |tag|
+      %a{:href => "/tag/#{tag}"}= tag

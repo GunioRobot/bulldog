@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title= "#{BlogConfig.title}: #{@page.title}"
+    %meta{:type => 'Description', :content => (@page.description || BlogConfig.description)}
+    %link{:rel => 'shortcut icon', :href => BlogConfig.favicon}
+    %link{:rel => 'alternate',:type => 'application/rss+xml', :href => (BlogConfig.rss_feed || '/rss'), :title => 'RSS'}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/styles.css", :media => "screen"}
+    = BlogConfig.typekit unless (BlogConfig.typekit.to_s.strip == '')
+  %body
+    #sidebar
+      = partial :'sidebar/sidebar'
+    = yield
+    .clear

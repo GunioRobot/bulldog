@@ -1,0 +1,31 @@
+- page          ||= @page
+- hide_comments ||= false
+
+%article
+  %header
+    %h1
+      %a{:href => page.path}= page.title
+    %h2= page.subtitle
+
+  .content
+    = partial page.template.to_sym
+    .clear
+
+  %footer
+    %section
+      %span= page.published_at.strftime('%Y')
+      = page.published_at.strftime('%b %d')
+
+    - if hide_comments
+      %section
+        %span Comment
+        %a{:href => page.path} Leave a Comment
+
+    %section.tag-list.last
+      %span Tags
+      - page.tags.sort.each do |tag|
+        %a{:href => "/tag/#{tag}"}= tag
+    .clear
+
+    - unless hide_comments
+      = partial :'post/_comments'

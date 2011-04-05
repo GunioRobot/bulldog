@@ -1,0 +1,11 @@
+@import '_fonts_and_colors';
+@import '_mixins';
+@import '_html';
+@import '_layout';
+@import '_sidebar';
+@import '_article';
+
+.index-footer {
+	padding-top: 0px;
+	text-align: center;
+}

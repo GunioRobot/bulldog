@@ -1,0 +1,9 @@
+= inside :layout do
+  %article
+    %header
+      %h1
+        %a{:href => @page.path}= @page.title
+      %h2= @page.subtitle
+    .content
+      = partial @page.template.to_sym
+      .clear

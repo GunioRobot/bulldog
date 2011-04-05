@@ -1,0 +1,6 @@
+- @posts[0..3].each do |page|
+  = partial :'post/_post_content', {:page => page, :hide_comments => true}
+
+.content.index-footer
+  %h2 Didn't find what you were looking for?
+  %a{:href => '/archive'} Search the Archives &rarr;
