@@ -3,6 +3,7 @@
     %header
       %h1
         %a{:href => @page.path}= @page.title
+        #{params[:tag]}
       %h2= @page.subtitle
     .content
       = partial @page.template.to_sym

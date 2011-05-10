@@ -25,7 +25,7 @@ end
 
 page '/tag/:tag' do |p, params|
   p.template    = 'tag'
-  p.title       = "Tagged: #{params[:tag]}"
+  p.title       = "Tagged:"
   p.hide_in_nav = true
 end
 
